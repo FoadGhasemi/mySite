@@ -1,0 +1,42 @@
+# Python
+pycache/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# SQLite database (don’t upload local DB)
+db.sqlite3
+
+# Media uploads (optional: you can host them externally later)
+media/
+
+# Django specific
+/staticfiles/
+*.log
+local_settings.py
+
+# Environment variables
+.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db

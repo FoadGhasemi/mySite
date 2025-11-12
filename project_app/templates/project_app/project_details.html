@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel ="stylesheet" href ="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>Title</title>
+</head>
+<bodyq>
+<div class = "container">
+    <ul>
+        <li>{{project.id}}</li>
+        <li>{{project.title}}</li>
+        <li>{{project.description}}</li>
+        <li>{% if project.image %}
+            <img src="{{ project.image.url }}" width="100">
+          {% else %}
+            <img src="{%static 'project_app/img/13.PNG'%}" width="100">
+          {% endif %}</li>
+    </ul>
+</div>
+</bodyq>
+</html>
