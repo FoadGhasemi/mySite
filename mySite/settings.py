@@ -78,8 +78,9 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 
 if os.environ.get('RENDER'):
     DATABASES = {
-        'default': dj_database_url.config(conn_max_age = 600)
+        'default': dj_database_url.config()
     }
+    DATABASES['default']['CONN_MAX_AGE'] = 600
 else:
     DATABASES = {
         'default': {
