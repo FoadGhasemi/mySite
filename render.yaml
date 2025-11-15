@@ -2,12 +2,17 @@ services:
   - type: web
     name: mySite
     env: python
-    region: Oregon (US West)
+    region: oregon
+    plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn mySite.wsgi:application"
     preDeployCommand: "python manage.py migrate"
+    startCommand: "gunicorn mySite.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
           name: foadgh_postger
           property: connectionString
+
+databases:
+  - name: foadgh_postger
+    plan: free
